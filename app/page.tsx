@@ -288,19 +288,19 @@ function TestimonialsSection() {
 
   const testimonials = [
     {
-      quote: 'I came expecting a conference. What I got was a room that changed how I think about leadership, wealth, and what I owe myself.',
-      name: 'Funtoibuoye',
-      context: 'Lagos Mastermind Alumna',
+      quote: 'These are the kinds of rooms you pay for — but still end up thanking the convener for the privilege of being in the room.',
+      name: '@funtoibuoye',
+      context: 'Lagos 2026',
     },
     {
-      quote: 'This was not networking. This was women doing real work in real time. I left with clarity I had been chasing for months.',
+      quote: 'One of my best investments in myself this year. I have grown. I have been stretched. And I have connected in ways I've never experienced before in a group setting.',
       name: '@tmospeaks',
-      context: 'Lagos Mastermind Alumna',
+      context: 'Lagos 2026',
     },
     {
-      quote: 'The calibre of women in that room reminded me of what becomes possible when you stop playing small. Udo curates with intention.',
+      quote: 'This is not just beautiful but exactly what I need to fully understand where I am and where I am headed. Thank you for seeing me.',
       name: 'Dr. Ibiene Ogolo',
-      context: 'Lagos Mastermind Alumna',
+      context: 'Lagos 2026',
     },
   ]
 
