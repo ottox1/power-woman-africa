@@ -106,11 +106,11 @@ function Navbar() {
         <a href="#" className="navbar__logo">Power Woman Africa</a>
         <div className={`navbar__menu ${isMenuOpen ? 'is-open' : ''}`}>
           <a href="#experience" className="navbar__link" onClick={() => setIsMenuOpen(false)}>The Experience</a>
-          <a href="#mastermind" className="navbar__link" onClick={() => setIsMenuOpen(false)}>The Mastermind</a>
+          <a href="#events" className="navbar__link" onClick={() => setIsMenuOpen(false)}>Events</a>
           <a href="#founder" className="navbar__link" onClick={() => setIsMenuOpen(false)}>Founder</a>
           <a href="#impact" className="navbar__link" onClick={() => setIsMenuOpen(false)}>Impact</a>
-          <a href="https://form.jotform.com/241352147735051" className="btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
-            Request an Invitation
+          <a href="https://buy.stripe.com/4gMaEXbBi6lsbk0cc3aEE3l" className="btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+            Book Your Seat
           </a>
         </div>
         <div
@@ -128,7 +128,7 @@ function Navbar() {
 }
 
 // ==========================================================================
-// HERO
+// HERO — Johannesburg Mastermind
 // ==========================================================================
 function HeroSection() {
   const [loaded, setLoaded] = useState(false)
@@ -146,26 +146,36 @@ function HeroSection() {
           <span className="hero__diamond">✦</span>
         </div>
         <p className={`overline hero__overline ${loaded ? 'loaded' : ''}`}>
-          The Leadership Mastermind Experience
+          Power Woman Africa · Latest Event
         </p>
         <h1 className={`h1-display hero__heading ${loaded ? 'loaded' : ''}`}>
-          Where Accomplished African Women Prepare for Their Next Scale
+          The Leadership Mastermind Experience
         </h1>
         <div className={`hero__divider ${loaded ? 'loaded' : ''}`} />
         <p className={`body-lg hero__subheading ${loaded ? 'loaded' : ''}`}>
-          An invitation-led leadership mastermind for African women operating at scale or preparing for it.
+          Power Woman Africa is now in South Africa. A private, in-person mastermind for women operating at or preparing for scale.
         </p>
         <p className={`hero__tagline ${loaded ? 'loaded' : ''}`}>
-          Women. Wealth. Legacy.
+          Real Mastery · Peer Exchange · Strategic Collaboration
         </p>
         <div className={`hero__meta ${loaded ? 'loaded' : ''}`}>
-          <span className="hero__meta-item">March 12–13, 2026</span>
+          <span className="hero__meta-item">Saturday 21 March 2026</span>
           <span className="hero__meta-dot">·</span>
-          <span className="hero__meta-item">Ikoyi, Lagos, Nigeria</span>
+          <span className="hero__meta-item">Saxon Hotel · Sandhurst · Johannesburg, South Africa</span>
         </div>
+        <div className={`hero__meta hero__meta--secondary ${loaded ? 'loaded' : ''}`}>
+          <span className="hero__meta-item">10:00 AM – 2:00 PM</span>
+          <span className="hero__meta-dot">·</span>
+          <span className="hero__meta-item">15 Spots Only</span>
+          <span className="hero__meta-dot">·</span>
+          <span className="hero__meta-item">$550</span>
+        </div>
+        <p className={`hero__application-note ${loaded ? 'loaded' : ''}`}>
+          By Application Only
+        </p>
         <div className={`hero__cta ${loaded ? 'loaded' : ''}`}>
-          <a href="https://form.jotform.com/241352147735051" className="btn-primary" target="_blank" rel="noopener noreferrer">
-            Request an Invitation
+          <a href="https://buy.stripe.com/4gMaEXbBi6lsbk0cc3aEE3l" className="btn-primary" target="_blank" rel="noopener noreferrer">
+            Book Your Seat
           </a>
         </div>
       </div>
@@ -194,22 +204,22 @@ function ExperienceSection() {
     {
       icon: '✦',
       title: 'Curated Circle',
-      desc: 'A carefully selected group of women who are either operating at scale or preparing for it.',
+      desc: 'A carefully selected group of 15 women who are either operating at scale or preparing for it.',
     },
     {
       icon: '✦',
-      title: 'Global Town Halls',
+      title: 'Real Mastery',
+      desc: 'Practical frameworks that translate lived leadership experience into transferable intelligence.',
+    },
+    {
+      icon: '✦',
+      title: 'Peer Exchange',
       desc: 'Conversations led by institutional leaders on governance, decision-making, and long-term leadership.',
     },
     {
       icon: '✦',
-      title: 'Live Mastermind Sessions',
-      desc: 'Practical frameworks that translate leadership experience into transferable intelligence.',
-    },
-    {
-      icon: '✦',
-      title: 'Intergenerational Dialogue',
-      desc: 'Exchange across leadership stages—from succession-ready executives to founders scaling their impact.',
+      title: 'Strategic Collaboration',
+      desc: 'Exchange across sectors, markets, and borders—from succession-ready executives to founders scaling their impact.',
     },
   ]
 
@@ -218,9 +228,9 @@ function ExperienceSection() {
       <div className="container">
         <div ref={ref} className={`experience__header animate-fade-up ${isVisible ? 'is-visible' : ''}`}>
           <p className="overline experience__overline">The Experience</p>
-          <h2 className="h2 experience__title">Two Days. One Room. Real Mastery.</h2>
+          <h2 className="h2 experience__title">One Room. Real Mastery.</h2>
           <p className="body-lg experience__intro">
-            A two-day in-person leadership mastermind for women building influence, shaping institutions, and thinking beyond individual success toward long-term impact.
+            A private, in-person leadership mastermind for women building influence, shaping institutions, and thinking beyond individual success toward long-term impact. Across sectors, markets, and borders.
           </p>
         </div>
         <div className="experience__grid">
@@ -231,6 +241,91 @@ function ExperienceSection() {
               <p className="experience__card-desc">{item.desc}</p>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ==========================================================================
+// WHAT YOU'LL LEAVE WITH (Outcomes)
+// ==========================================================================
+function OutcomesSection() {
+  const { ref, isVisible } = useIntersectionObserver()
+
+  const outcomes = [
+    'A sharper leadership lens — refined through real peer exchange, not theory.',
+    'At least one strategic relationship that shifts how you think about your next move.',
+    'A personal framework for scaling your influence without sacrificing your well-being.',
+    'Clarity on the wealth architecture that matches your ambition and season.',
+    'The exhale. For the woman who just needs to be in the right room.',
+  ]
+
+  return (
+    <section className="outcomes" id="outcomes">
+      <div className="container">
+        <div ref={ref} className={`outcomes__wrapper animate-fade-up ${isVisible ? 'is-visible' : ''}`}>
+          <p className="overline outcomes__overline">What You Leave With</p>
+          <h2 className="h2 outcomes__title">This is what the room is designed to give you.</h2>
+          <ul className="outcomes__list">
+            {outcomes.map((item, i) => (
+              <li key={i} className={`outcomes__item animate-fade-up stagger-${i + 1} ${isVisible ? 'is-visible' : ''}`}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ==========================================================================
+// TESTIMONIALS — Lagos Mastermind
+// ==========================================================================
+function TestimonialsSection() {
+  const { ref, isVisible } = useIntersectionObserver()
+
+  const testimonials = [
+    {
+      quote: 'I came expecting a conference. What I got was a room that changed how I think about leadership, wealth, and what I owe myself.',
+      name: 'Funtoibuoye',
+      context: 'Lagos Mastermind Alumna',
+    },
+    {
+      quote: 'This was not networking. This was women doing real work in real time. I left with clarity I had been chasing for months.',
+      name: '@tmospeaks',
+      context: 'Lagos Mastermind Alumna',
+    },
+    {
+      quote: 'The calibre of women in that room reminded me of what becomes possible when you stop playing small. Udo curates with intention.',
+      name: 'Dr. Ibiene Ogolo',
+      context: 'Lagos Mastermind Alumna',
+    },
+  ]
+
+  return (
+    <section className="testimonials">
+      <div className="container">
+        <div ref={ref} className={`testimonials__wrapper animate-fade-up ${isVisible ? 'is-visible' : ''}`}>
+          <p className="overline testimonials__overline">From the Room</p>
+          <h2 className="h2 testimonials__title">What Women Are Saying</h2>
+          <div className="testimonials__grid">
+            {testimonials.map((t, i) => (
+              <div key={i} className={`testimonials__card animate-fade-up stagger-${i + 1} ${isVisible ? 'is-visible' : ''}`}>
+                <p className="testimonials__quote">&ldquo;{t.quote}&rdquo;</p>
+                <div className="testimonials__attr">
+                  <span className="testimonials__name">{t.name}</span>
+                  <span className="testimonials__context">{t.context}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="testimonials__cta">
+            <a href="https://buy.stripe.com/4gMaEXbBi6lsbk0cc3aEE3l" className="btn-primary" target="_blank" rel="noopener noreferrer">
+              Book Your Seat — $550
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -250,14 +345,14 @@ function MastermindSection() {
           <p className="overline curators__overline">The Mastermind</p>
           <h2 className="h2 curators__title">The Power Woman Playbook</h2>
           <p className="curators__text">
-            Anchored by the Power Woman Playbook—a leadership blueprint designed by Udo Okonjo—this mastermind is built for depth, not performance. Every session translates lived leadership experience into shared mastery.
+            Anchored by the Power Woman Playbook — a leadership blueprint designed by Udo Okonjo — this mastermind is built for depth, not performance. Every session translates lived leadership experience into shared mastery.
           </p>
           <p className="curators__text">
-            Across two days, you will move through frameworks designed to sharpen how you lead, build, and own:
+            In a curated room of just 15 women, you will move through frameworks designed to sharpen how you lead, build, and own.
           </p>
           <ul className="curators__list">
-            <li className={`curators__list-item animate-fade-up stagger-1 ${isVisible ? 'is-visible' : ''}`}>Day 1 · High Impact Leadership Mastery</li>
-            <li className={`curators__list-item animate-fade-up stagger-2 ${isVisible ? 'is-visible' : ''}`}>Day 2 · Wealth by Design™ Mastery</li>
+            <li className={`curators__list-item animate-fade-up stagger-1 ${isVisible ? 'is-visible' : ''}`}>High Impact Leadership Mastery</li>
+            <li className={`curators__list-item animate-fade-up stagger-2 ${isVisible ? 'is-visible' : ''}`}>Wealth by Design Mastery</li>
           </ul>
         </div>
       </div>
@@ -294,40 +389,6 @@ function FounderSection() {
             <p className="founder__text">
               Power Woman Africa represents the culmination of her work across leadership development, capital formation, and legacy building. Her work continues to shape how accomplished African women think about influence, scale, ownership, and long-term impact.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-// ==========================================================================
-// VIP EARLY ACCESS
-// ==========================================================================
-function VIPSection() {
-  const { ref, isVisible } = useIntersectionObserver()
-
-  return (
-    <section className="vip">
-      <div className="container">
-        <div ref={ref} className={`vip__wrapper animate-fade-up ${isVisible ? 'is-visible' : ''}`}>
-          <p className="overline vip__overline">VIP Early Access</p>
-          <h2 className="h2 vip__title">The Right Room Changes Everything</h2>
-          <p className="vip__text">
-            This mastermind is built around real mastery, strategic exchange, and serious collaboration across sectors, markets, and geographies.
-          </p>
-          <ul className="vip__includes">
-            <li>Priority participation in all mastermind sessions</li>
-            <li>Curated peer-level conversations</li>
-            <li>Private VIP experiences designed to deepen connection beyond the room</li>
-          </ul>
-          <p className="vip__note">
-            No urgency. No pressure. Just an intentional invitation to the right room.
-          </p>
-          <div className="vip__cta">
-            <a href="https://form.jotform.com/241352147735051" className="btn-primary" target="_blank" rel="noopener noreferrer">
-              Confirm Your VIP Access Pass
-            </a>
           </div>
         </div>
       </div>
@@ -394,10 +455,10 @@ function LegacySection() {
           <p className="overline legacy__overline">About Power Woman Africa</p>
           <h2 className="h2 legacy__title">Proven Foundation. Elevated Platform.</h2>
           <p className="legacy__text">
-            Power Woman Africa is built on more than a decade of sustained and measurable impact in women's leadership development across Africa and the diaspora.
+            Power Woman Africa is built on more than a decade of sustained and measurable impact in women&apos;s leadership development across Africa and the diaspora.
           </p>
           <p className="legacy__text">
-            For over fifteen years, the platform formerly known as Inspired Women of Worth served as one of Africa's most consistent and respected ecosystems for developing women leaders across business, corporate institutions, the public sector, and civil society.
+            For over fifteen years, the platform formerly known as Inspired Women of Worth served as one of Africa&apos;s most consistent and respected ecosystems for developing women leaders across business, corporate institutions, the public sector, and civil society.
           </p>
           <p className="legacy__text">
             After impacting thousands of women, a clear gap emerged: many accomplished women have achieved success but lack the frameworks, networks, and strategic thinking required to scale influence. Power Woman Africa is the response to that gap.
@@ -407,7 +468,7 @@ function LegacySection() {
               <div className="legacy__evo-label">Then</div>
               <div className="legacy__evo-text">Foundational Capacity Building</div>
             </div>
-            <div className="legacy__evo-arrow">→</div>
+            <div className="legacy__evo-arrow">&rarr;</div>
             <div className="legacy__evo-item">
               <div className="legacy__evo-label">Now</div>
               <div className="legacy__evo-text">Mastery, Scale & Ownership</div>
@@ -420,7 +481,116 @@ function LegacySection() {
 }
 
 // ==========================================================================
-// EVENT SUMMARY / CTA
+// EVENTS SECTION — Tabbed slider
+// ==========================================================================
+function EventsSection() {
+  const { ref, isVisible } = useIntersectionObserver()
+  const [activeEvent, setActiveEvent] = useState(0)
+
+  const events = [
+    {
+      id: 'johannesburg',
+      label: 'Johannesburg 2026',
+      badge: 'Upcoming',
+      title: 'The Leadership Mastermind Experience — Johannesburg',
+      date: 'Saturday 21 March 2026',
+      location: 'Saxon Hotel · Sandhurst · Johannesburg, South Africa',
+      time: '10:00 AM – 2:00 PM',
+      spots: '15 Spots Only',
+      price: '$550',
+      desc: 'Power Woman Africa arrives in South Africa. A private, in-person mastermind for women operating at or preparing for scale. Real mastery, peer exchange, and strategic collaboration — across sectors, markets, and borders.',
+      cta: { text: 'Book Your Seat — $550', href: 'https://buy.stripe.com/4gMaEXbBi6lsbk0cc3aEE3l' },
+    },
+    {
+      id: 'lagos',
+      label: 'Lagos 2026',
+      badge: 'Completed',
+      title: 'The Leadership Mastermind Experience — Lagos',
+      date: 'March 12 – 13, 2026',
+      location: 'Ikoyi, Lagos, Nigeria',
+      time: 'Two-Day Mastermind',
+      spots: null,
+      price: null,
+      desc: 'The inaugural Power Woman Africa Leadership Mastermind brought together accomplished women leaders for two transformative days of wealth strategy, leadership mastery, and intentional living. A curated room for women operating at scale or preparing for it.',
+      cta: null,
+    },
+  ]
+
+  const current = events[activeEvent]
+
+  return (
+    <section className="events-section" id="events">
+      <div className="container">
+        <div ref={ref} className={`events__wrapper animate-fade-up ${isVisible ? 'is-visible' : ''}`}>
+          <p className="overline events__overline">Events</p>
+          <h2 className="h2 events__title">Power Woman Africa Masterminds</h2>
+
+          {/* Tab buttons */}
+          <div className="events__tabs">
+            {events.map((evt, i) => (
+              <button
+                key={evt.id}
+                className={`events__tab ${activeEvent === i ? 'events__tab--active' : ''}`}
+                onClick={() => setActiveEvent(i)}
+              >
+                {evt.label}
+                <span className={`events__tab-badge ${evt.badge === 'Upcoming' ? 'events__tab-badge--upcoming' : 'events__tab-badge--completed'}`}>
+                  {evt.badge}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Event card */}
+          <div className="events__card" key={current.id}>
+            <div className="events__card-header">
+              <h3 className="h3 events__card-title">{current.title}</h3>
+              {current.badge === 'Upcoming' && (
+                <span className="events__card-badge">Upcoming</span>
+              )}
+            </div>
+
+            <div className="events__card-meta">
+              <div className="events__card-meta-row">
+                <span className="events__card-meta-label">Date</span>
+                <span>{current.date}</span>
+              </div>
+              <div className="events__card-meta-row">
+                <span className="events__card-meta-label">Location</span>
+                <span>{current.location}</span>
+              </div>
+              <div className="events__card-meta-row">
+                <span className="events__card-meta-label">Format</span>
+                <span>{current.time}</span>
+              </div>
+              {current.spots && (
+                <div className="events__card-meta-row">
+                  <span className="events__card-meta-label">Availability</span>
+                  <span>{current.spots} &middot; {current.price}</span>
+                </div>
+              )}
+            </div>
+
+            <p className="events__card-desc">{current.desc}</p>
+
+            {current.cta ? (
+              <a href={current.cta.href} className="btn-primary" target="_blank" rel="noopener noreferrer">
+                {current.cta.text}
+              </a>
+            ) : (
+              <span className="events__card-completed">
+                Event completed &mdash; media and recap coming soon.
+              </span>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ==========================================================================
+// EVENT SUMMARY / CTA — Johannesburg
 // ==========================================================================
 function EventSummarySection() {
   const { ref, isVisible } = useIntersectionObserver()
@@ -430,17 +600,17 @@ function EventSummarySection() {
       <div className="container">
         <div ref={ref} className={`event-summary__inner animate-fade-up ${isVisible ? 'is-visible' : ''}`}>
           <p className="event-summary__tagline">Women. Wealth. Legacy.</p>
-          <p className="event-summary__date">March 12–13, 2026</p>
-          <p className="event-summary__location">Ikoyi, Lagos, Nigeria</p>
+          <p className="event-summary__date">Saturday 21 March 2026</p>
+          <p className="event-summary__location">Saxon Hotel &middot; Sandhurst &middot; Johannesburg</p>
           <p className="event-summary__pillars-text">
-            Real Mastery &nbsp;·&nbsp; Peer Exchange &nbsp;·&nbsp; Strategic Collaboration
+            Real Mastery &nbsp;&middot;&nbsp; Peer Exchange &nbsp;&middot;&nbsp; Strategic Collaboration
           </p>
-          <p className="event-summary__invitation">By invitation.</p>
+          <p className="event-summary__invitation">By application only. 15 spots. $550.</p>
           <p className="event-summary__desc">
-            A curated room for women operating at scale or preparing for it.
+            A curated room for women designing their next level of leadership and impact.
           </p>
-          <a href="https://form.jotform.com/241352147735051" className="btn-primary" target="_blank" rel="noopener noreferrer">
-            Request an Invitation
+          <a href="https://buy.stripe.com/4gMaEXbBi6lsbk0cc3aEE3l" className="btn-primary" target="_blank" rel="noopener noreferrer">
+            Book Your Seat
           </a>
         </div>
       </div>
@@ -465,24 +635,21 @@ function Footer() {
           <div>
             <h6 className="footer__nav-heading">Navigate</h6>
             <a href="#experience" className="footer__link">The Experience</a>
-            <a href="#mastermind" className="footer__link">The Mastermind</a>
+            <a href="#events" className="footer__link">Events</a>
             <a href="#founder" className="footer__link">Founder</a>
             <a href="#impact" className="footer__link">Impact</a>
           </div>
           <div>
             <h6 className="footer__nav-heading">Connect</h6>
-            <a href="mailto:info@powerwomanafrica.com" className="footer__link">Email Us</a>
+            <a href="mailto:udo@udookonjo.com" className="footer__link">Email Us</a>
             <a href="https://udookonjo.com" className="footer__link" target="_blank" rel="noopener noreferrer">Udo Okonjo</a>
-            <a href="https://form.jotform.com/241352147735051" className="footer__link" target="_blank" rel="noopener noreferrer">Request Invitation</a>
+            <a href="https://buy.stripe.com/4gMaEXbBi6lsbk0cc3aEE3l" className="footer__link" target="_blank" rel="noopener noreferrer">Book Your Seat</a>
           </div>
         </div>
         <div className="footer__bottom">
-          <p className="footer__copyright">© 2026 Power Woman Africa. All rights reserved.</p>
-          <a href="mailto:info@powerwomanafrica.com" className="footer__email">info@powerwomanafrica.com</a>
+          <p className="footer__copyright">&copy; 2026 Power Woman Africa. All rights reserved.</p>
+          <a href="mailto:udo@udookonjo.com" className="footer__email">udo@udookonjo.com</a>
         </div>
-      </div>
-      <div style={{ marginTop: '32px', textAlign: 'center', fontSize: '0.75rem', color: 'rgba(245,240,232,0.3)', paddingBottom: '8px' }}>
-        10 Onisiwo Street, Off Lateef Jakande, Ikoyi, Lagos, Nigeria
       </div>
     </footer>
   )
@@ -501,11 +668,13 @@ export default function Home() {
         <HeroSection />
         <TaglineBanner />
         <ExperienceSection />
+        <OutcomesSection />
+        <TestimonialsSection />
         <MastermindSection />
         <FounderSection />
-        <VIPSection />
         <ImpactSection />
         <LegacySection />
+        <EventsSection />
         <EventSummarySection />
       </main>
       <Footer />

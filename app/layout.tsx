@@ -19,21 +19,22 @@ const siteUrl = 'https://powerwomanafrica.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Power Woman Africa | The Leadership Mastermind Experience',
-  description: 'An invitation-led leadership mastermind for African women operating at scale or preparing for it. March 12–13, 2026 · Ikoyi, Lagos, Nigeria.',
+  title: 'Power Woman Africa | The Leadership Mastermind Experience — Johannesburg',
+  description: 'A private, in-person mastermind for women operating at or preparing for scale. Saturday 21 March 2026 · Saxon Hotel · Sandhurst · Johannesburg. 15 spots only.',
   keywords: [
     'Power Woman Africa',
     'African women leadership',
-    'leadership masterclass',
-    'women leadership Lagos',
+    'leadership mastermind',
+    'women leadership Johannesburg',
     'Udo Okonjo',
     'women wealth legacy',
     'African women executives',
-    'leadership conference Nigeria',
+    'leadership mastermind South Africa',
+    'Saxon Hotel Johannesburg',
   ],
   openGraph: {
-    title: 'Power Woman Africa | Leadership Mastermind 2026',
-    description: 'An invitation-led leadership mastermind for African women operating at scale. March 12–13, Lagos.',
+    title: 'Power Woman Africa | Leadership Mastermind — Johannesburg 2026',
+    description: 'A private, in-person mastermind for women operating at or preparing for scale. Saturday 21 March 2026 · Saxon Hotel · Johannesburg.',
     url: siteUrl,
     siteName: 'Power Woman Africa',
     locale: 'en_US',
@@ -41,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Power Woman Africa | Leadership Mastermind 2026',
-    description: 'An invitation-led leadership mastermind for African women operating at scale.',
+    title: 'Power Woman Africa | Leadership Mastermind — Johannesburg 2026',
+    description: 'A private, in-person mastermind for women operating at or preparing for scale. 21 March 2026 · Saxon Hotel · Johannesburg.',
   },
 }
 
