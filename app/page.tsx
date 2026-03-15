@@ -293,7 +293,7 @@ function TestimonialsSection() {
       context: 'Lagos 2026',
     },
     {
-      quote: 'One of my best investments in myself this year. I have grown. I have been stretched. And I have connected in ways I've never experienced before in a group setting. This room pushed me to move now.',
+      quote: 'One of my best investments in myself this year. I have grown. I have been stretched. And I have connected in ways I\'ve never experienced before in a group setting. This room pushed me to move now.',
       name: '@tmospeaks',
       context: 'Lagos 2026',
     },
