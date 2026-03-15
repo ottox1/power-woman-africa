@@ -487,7 +487,19 @@ function EventsSection() {
   const { ref, isVisible } = useIntersectionObserver()
   const [activeEvent, setActiveEvent] = useState(0)
 
-  const events = [
+  const events: Array<{
+    id: string;
+    label: string;
+    badge: string;
+    title: string;
+    date: string;
+    location: string;
+    time: string;
+    spots: string | null;
+    price: string | null;
+    desc: string;
+    cta: { text: string; href: string } | null;
+  }> = [
     {
       id: 'johannesburg',
       label: 'Johannesburg 2026',
