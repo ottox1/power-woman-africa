@@ -153,7 +153,7 @@ function HeroSection() {
         </h1>
         <div className={`hero__divider ${loaded ? 'loaded' : ''}`} />
         <p className={`body-lg hero__subheading ${loaded ? 'loaded' : ''}`}>
-          A private, in-person Mastermind for women operating at or preparing for scale.
+          A Private Strategic Room for Women Building What Comes Next
         </p>
         <p className={`hero__tagline ${loaded ? 'loaded' : ''}`}>
           Real Mastery · Peer Exchange · Strategic Collaboration
@@ -168,7 +168,7 @@ function HeroSection() {
           <span className="hero__meta-dot">·</span>
           <span className="hero__meta-item">25 Spots · 5 VIP Only</span>
           <span className="hero__meta-dot">·</span>
-          <span className="hero__meta-item">$250 – $550</span>
+          <span className="hero__meta-item">$275 – $550</span>
         </div>
         <p className={`hero__application-note ${loaded ? 'loaded' : ''}`}>
           By Registration
@@ -509,8 +509,8 @@ function EventsSection() {
       location: 'Fairlawns · Morningside · Johannesburg',
       time: '10:00AM – 3:00PM',
       spots: '25 Spots · 5 VIP Only',
-      price: '$250 – $550',
-      desc: 'A private, in-person Mastermind for women operating at or preparing for scale. You will leave with clarity on your leadership brand, your personal Wealth Blueprint, your bold next move, and a 90-Day Action Plan. You become part of the Power Woman Africa Circle — a cross-border community committed to peer-to-peer exchange and accountability that doesn\'t end when the room closes.',
+      price: '$275 – $550',
+      desc: 'A Private Strategic Room for Women Building What Comes Next. You will leave with clarity on your leadership brand, your personal Wealth Blueprint, your bold next move, and a 90-Day Action Plan. You become part of the Power Woman Africa Circle — a cross-border community committed to peer-to-peer exchange and accountability that doesn\'t end when the room closes.',
       cta: null,
     },
     {
@@ -593,10 +593,10 @@ function EventsSection() {
                 
                 <div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
                   <a href="https://buy.stripe.com/4gM00j8p639gco48ZRaEE3n" className="btn-primary" style={{flex: '1 1 200px'}} target="_blank" rel="noopener noreferrer">
-                    Book $250
+                    Book Mastermind $275
                   </a>
                   <a href="https://buy.stripe.com/4gMaEXbBi6lsbk0cc3aEE3l" className="btn-primary" style={{flex: '1 1 200px'}} target="_blank" rel="noopener noreferrer">
-                    Book $550
+                    Book VIP Access $550
                   </a>
                 </div>
               </div>
@@ -632,9 +632,9 @@ function EventSummarySection() {
           <p className="event-summary__pillars-text">
             Real Mastery &nbsp;&middot;&nbsp; Peer Exchange &nbsp;&middot;&nbsp; Strategic Collaboration
           </p>
-          <p className="event-summary__invitation">By registration. 25 spots · 5 VIP only. $250 – $550.</p>
+          <p className="event-summary__invitation">By registration. 25 spots · 5 VIP only. $275 – $550.</p>
           <p className="event-summary__desc">
-            A private, in-person Mastermind for women operating at or preparing for scale.
+            A Private Strategic Room for Women Building What Comes Next
           </p>
           <a href="#events" className="btn-primary">
             Book Your Seat
