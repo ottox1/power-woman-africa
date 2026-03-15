@@ -146,33 +146,33 @@ function HeroSection() {
           <span className="hero__diamond">✦</span>
         </div>
         <p className={`overline hero__overline ${loaded ? 'loaded' : ''}`}>
-          POWER WOMAN AFRICA
+          Power Woman Africa · VIP Mastermind
         </p>
         <h1 className={`h1-display hero__heading ${loaded ? 'loaded' : ''}`}>
-          VIP MASTERMIND · JOHANNESBURG EDITION
+          The Leadership Mastermind Experience
         </h1>
         <div className={`hero__divider ${loaded ? 'loaded' : ''}`} />
         <p className={`body-lg hero__subheading ${loaded ? 'loaded' : ''}`}>
-          The Leadership Mastermind Experience
-        </p>
-        <p className={`hero__tagline ${loaded ? 'loaded' : ''}`}>
           A private, in-person Mastermind for women operating at or preparing for scale.
         </p>
+        <p className={`hero__tagline ${loaded ? 'loaded' : ''}`}>
+          Real Mastery · Peer Exchange · Strategic Collaboration
+        </p>
         <div className={`hero__meta ${loaded ? 'loaded' : ''}`}>
-          <span className="hero__meta-item">📅 Saturday 21 March 2026</span>
+          <span className="hero__meta-item">Saturday 21 March 2026</span>
+          <span className="hero__meta-dot">·</span>
+          <span className="hero__meta-item">Fairlawns · Morningside · Johannesburg</span>
         </div>
         <div className={`hero__meta hero__meta--secondary ${loaded ? 'loaded' : ''}`}>
-          <span className="hero__meta-item">⏰ 10:00AM – 3:00PM</span>
+          <span className="hero__meta-item">10:00AM – 3:00PM</span>
+          <span className="hero__meta-dot">·</span>
+          <span className="hero__meta-item">25 Spots · 5 VIP Only</span>
+          <span className="hero__meta-dot">·</span>
+          <span className="hero__meta-item">$250 – $550</span>
         </div>
-        <div className={`hero__meta hero__meta--secondary ${loaded ? 'loaded' : ''}`}>
-          <span className="hero__meta-item">📍 Fairlawns, Morningside, Johannesburg</span>
-        </div>
-        <div className={`hero__meta hero__meta--secondary ${loaded ? 'loaded' : ''}`}>
-          <span className="hero__meta-item">💰 $250 – $550</span>
-        </div>
-        <div className={`hero__meta hero__meta--secondary ${loaded ? 'loaded' : ''}`}>
-          <span className="hero__meta-item">🔒 25 Spots · 5 VIP Only · By Registration</span>
-        </div>
+        <p className={`hero__application-note ${loaded ? 'loaded' : ''}`}>
+          By Registration
+        </p>
         <div className={`hero__cta ${loaded ? 'loaded' : ''}`}>
           <a href="#events" className="btn-primary">
             Book Your Seat
@@ -312,9 +312,9 @@ function TestimonialsSection() {
           <h2 className="h2 testimonials__title">What Women Are Saying</h2>
           <div className="testimonials__grid">
             {testimonials.map((t, i) => (
-              <div key={i} className={`testimonials__card animate-fade-up stagger-${i + 1} ${isVisible ? 'is-visible' : ''}`}>
+              <div key={i} className={`testimonials__card animate-fade-up stagger-${i + 1} ${isVisible ? 'is-visible' : ''}`} style={{display: 'flex', flexDirection: 'column'}}>
                 <p className="testimonials__quote">&ldquo;{t.quote}&rdquo;</p>
-                <div className="testimonials__attr">
+                <div className="testimonials__attr" style={{marginTop: 'auto'}}>
                   <span className="testimonials__name">{t.name}</span>
                   <span className="testimonials__context">{t.context}</span>
                 </div>
@@ -504,13 +504,13 @@ function EventsSection() {
       id: 'johannesburg',
       label: 'Johannesburg 2026',
       badge: 'Upcoming',
-      title: 'VIP MASTERMIND · JOHANNESBURG EDITION',
-      date: '📅 Saturday 21 March 2026',
-      location: '📍 Fairlawns, Morningside, Johannesburg',
-      time: '⏰ 10:00AM – 3:00PM',
-      spots: null,
-      price: null,
-      desc: 'A private, in-person Mastermind for women operating at or preparing for scale.',
+      title: 'The Leadership Mastermind Experience — Johannesburg',
+      date: 'Saturday 21 March 2026',
+      location: 'Fairlawns · Morningside · Johannesburg',
+      time: '10:00AM – 3:00PM',
+      spots: '25 Spots · 5 VIP Only',
+      price: '$250 – $550',
+      desc: 'A private, in-person Mastermind for women operating at or preparing for scale. You will leave with clarity on your leadership brand, your personal Wealth Blueprint, your bold next move, and a 90-Day Action Plan. You become part of the Power Woman Africa Circle — a cross-border community committed to peer-to-peer exchange and accountability that doesn\'t end when the room closes.',
       cta: null,
     },
     {
@@ -564,60 +564,40 @@ function EventsSection() {
 
             <div className="events__card-meta">
               <div className="events__card-meta-row">
+                <span className="events__card-meta-label">Date</span>
                 <span>{current.date}</span>
               </div>
               <div className="events__card-meta-row">
-                <span>{current.time}</span>
-              </div>
-              <div className="events__card-meta-row">
+                <span className="events__card-meta-label">Location</span>
                 <span>{current.location}</span>
               </div>
+              <div className="events__card-meta-row">
+                <span className="events__card-meta-label">Format</span>
+                <span>{current.time}</span>
+              </div>
+              {current.spots && (
+                <div className="events__card-meta-row">
+                  <span className="events__card-meta-label">Availability</span>
+                  <span>{current.spots} &middot; {current.price}</span>
+                </div>
+              )}
             </div>
 
             <p className="events__card-desc">{current.desc}</p>
 
             {current.id === 'johannesburg' ? (
               <div className="events__detailed-content">
-                <h4 className="h4">YOU WILL LEAVE WITH:</h4>
-                <ul className="events__outcomes-list">
-                  <li>✦ Clarity on your leadership brand at the next level — visibility, voice, positioning.</li>
-                  <li>✦ Your personal Wealth Blueprint — multiple streams mapped, gaps named, architecture designed.</li>
-                  <li>✦ Your bold next move — the ask you've been avoiding, the partnership you've been circling.</li>
-                  <li>✦ A 90-Day Action Plan — signed, witnessed, real. And a peer to hold you to it.</li>
-                  <li>✦ You become part of the Power Woman Africa Circle — a cross-border community of accomplished women committed to peer-to-peer exchange, accountability, and connection that doesn't end when the room closes.</li>
-                  <li>✦ Or simply — four hours to exhale, reset, and remember who you are. Every season has a room. This one is yours.</li>
-                </ul>
-
-                <h4 className="h4" style={{marginTop: '2rem'}}>TICKET OPTIONS</h4>
-                
-                <div className="events__ticket-option">
-                  <h5 className="events__ticket-title">MASTERMIND ACCESS — $250</h5>
-                  <p className="events__ticket-desc">Full half-day Mastermind experience · All materials · LifeBoard toolkit · Peer accountability circle</p>
-                  <a href="https://buy.stripe.com/4gM00j8p639gco48ZRaEE3n" className="btn-primary" target="_blank" rel="noopener noreferrer">
-                    Book Mastermind Access
-                  </a>
-                </div>
-
-                <div className="events__ticket-option" style={{marginTop: '1.5rem'}}>
-                  <h5 className="events__ticket-title">VIP EXPERIENCE — $550 (5 spots only)</h5>
-                  <p className="events__ticket-desc">Everything in Mastermind Access, plus a private 1-hour LifeBoard Strategy Session with Udo Okonjo — your personalised 10-year architecture, one on one.</p>
-                  <a href="https://buy.stripe.com/4gMaEXbBi6lsbk0cc3aEE3l" className="btn-primary" target="_blank" rel="noopener noreferrer">
-                    Book VIP Experience
-                  </a>
-                </div>
-
-                <p className="events__secure-payment" style={{marginTop: '1.5rem', fontSize: '0.9rem', opacity: 0.8}}>
-                  🔒 Secure payment via Stripe · Payment confirms your place
+                <p className="events__vip-note" style={{marginTop: '1.5rem', marginBottom: '1.5rem', fontStyle: 'italic'}}>
+                  VIP tickets include a private 1-hour LifeBoard Strategy Session with Udo Okonjo — your personalised 10-year architecture, one on one.
                 </p>
-
-                <div className="events__quote" style={{marginTop: '2rem', fontStyle: 'italic', borderLeft: '3px solid gold', paddingLeft: '1rem'}}>
-                  <p>&ldquo;The room you choose determines the leader you become.&rdquo;</p>
-                  <p style={{marginTop: '0.5rem', fontSize: '0.9rem'}}>— Udo Okonjo · Power Woman Africa</p>
-                </div>
-
-                <div className="events__contact" style={{marginTop: '2rem'}}>
-                  <p><strong>Questions:</strong> <a href="mailto:echidinma@fineandcountry.ng">echidinma@fineandcountry.ng</a></p>
-                  <p><strong>Website:</strong> <a href="http://www.udookonjo.com" target="_blank" rel="noopener noreferrer">www.udookonjo.com</a></p>
+                
+                <div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+                  <a href="https://buy.stripe.com/4gM00j8p639gco48ZRaEE3n" className="btn-primary" style={{flex: '1 1 200px'}} target="_blank" rel="noopener noreferrer">
+                    Book $250
+                  </a>
+                  <a href="https://buy.stripe.com/4gMaEXbBi6lsbk0cc3aEE3l" className="btn-primary" style={{flex: '1 1 200px'}} target="_blank" rel="noopener noreferrer">
+                    Book $550
+                  </a>
                 </div>
               </div>
             ) : current.cta ? (
@@ -646,18 +626,18 @@ function EventSummarySection() {
     <section className="event-summary">
       <div className="container">
         <div ref={ref} className={`event-summary__inner animate-fade-up ${isVisible ? 'is-visible' : ''}`}>
-          <p className="event-summary__tagline">VIP MASTERMIND · JOHANNESBURG EDITION</p>
+          <p className="event-summary__tagline">Women. Wealth. Legacy.</p>
           <p className="event-summary__date">Saturday 21 March 2026</p>
           <p className="event-summary__location">Fairlawns &middot; Morningside &middot; Johannesburg</p>
           <p className="event-summary__pillars-text">
-            10:00AM – 3:00PM
+            Real Mastery &nbsp;&middot;&nbsp; Peer Exchange &nbsp;&middot;&nbsp; Strategic Collaboration
           </p>
           <p className="event-summary__invitation">By registration. 25 spots · 5 VIP only. $250 – $550.</p>
           <p className="event-summary__desc">
             A private, in-person Mastermind for women operating at or preparing for scale.
           </p>
           <a href="#events" className="btn-primary">
-            View Event Details
+            Book Your Seat
           </a>
         </div>
       </div>
